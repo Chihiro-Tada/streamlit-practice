@@ -1,4 +1,4 @@
 # streamlit-practice
 streamlitの練習
 
-このアプリはカードゲームを遊ぶためです。
+このアプリはカードゲームを遊ぶためです
