@@ -7,3 +7,7 @@ nav:
   - About: about.md
   - High and Low: high_and_low.md
 repo_url: https://github.com/Chihiro-Tada/streamlit-practice
+
+extra:
+  version:
+    provider: mike
