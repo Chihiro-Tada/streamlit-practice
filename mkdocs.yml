@@ -1,0 +1,9 @@
+site_name: card-game
+site_url: https://Chihiro-Tada.github.io/streamlit-practice/
+theme:
+  name: mkdocs
+nav:
+  - Home: index.md
+  - About: about.md
+  - High and Low: high_and_low.md
+repo_url: https://github.com/Chihiro-Tada/streamlit-practice
