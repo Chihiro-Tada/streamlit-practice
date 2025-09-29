@@ -1,1 +1,1 @@
-{"config":{"indexing":"full","lang":["en"],"min_search_length":3,"prebuild_index":false,"separator":"[\\s\\-]+"},"docs":[{"location":"","text":"\u3053\u3093\u306b\u3061\u306f aiueg","title":"Home"},{"location":"#_1","text":"aiueg","title":"\u3053\u3093\u306b\u3061\u306f"}]}
+{"config":{"indexing":"full","lang":["en"],"min_search_length":3,"prebuild_index":false,"separator":"[\\s\\-]+"},"docs":[{"location":"","text":"link link","title":"Home"},{"location":"#link","text":"link","title":"link"}]}
