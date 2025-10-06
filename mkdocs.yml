@@ -1,13 +1,106 @@
 site_name: card-game
 site_url: https://Chihiro-Tada.github.io/streamlit-practice/
+site_description: "Streamlitで作るカードゲーム（High and Low）のドキュメント"
+site_author: "Chihiro Tada"
+
+repo_url: https://github.com/Chihiro-Tada/streamlit-practice
+repo_name: Chihiro-Tada/streamlit-practice
+edit_uri: edit/main/docs/
+
 theme:
-  name: mkdocs
+  name: material
+  language: ja
+  features:
+    - navigation.tabs
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.action.edit
+    - toc.follow
+    - header.autohide
+    - announce.dismiss
+    - palette.toggle   # ダーク/ライト切替
+    - content.tabs.link
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: ダークモードへ
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: ライトモードへ
+  icon:
+    repo: fontawesome/brands/github
+
 nav:
   - Home: index.md
-  - About: about.md
-  - High and Low: high_and_low.md
-repo_url: https://github.com/Chihiro-Tada/streamlit-practice
+  - Guide:
+      - ゲームの遊び方: high_and_low.md
+      - 実装ガイド: dev/implementation.md
+      - API/内部設計: dev/api.md
+      - よくあるエラーと対処: dev/troubleshooting.md
+  - 開発メモ:
+      - 環境構築: dev/setup.md
+      - デプロイ(GitHub Pages): dev/deploy.md
+      - テスト戦略: dev/testing.md
+      - リリースノート: changelog.md
 
 extra:
   version:
     provider: mike
+    default: latest
+    alias: true
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Chihiro-Tada
+      name: GitHub
+    - icon: fontawesome/solid/house
+      link: https://Chihiro-Tada.github.io/streamlit-practice/
+      name: Docs
+
+plugins:
+  - search
+  - tags
+  - git-revision-date-localized:
+      type: date
+      fallback_to_build_date: true
+      locale: ja
+      timezone: Asia/Tokyo
+  - minify:
+      minify_html: true
+
+markdown_extensions:
+  - admonition
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.arithmatex:   # 数式が必要なら
+      generic: true
+  - attr_list
+  - footnotes
+  - def_list
+
+extra_css:
+  - stylesheets/extra.css   # Materialの推奨パス
+extra_javascript:
+  - javascripts/extra.js
+  # 数式を使う場合（KaTeX）
+  - https://unpkg.com/katex@0.16.9/dist/katex.min.js
+  - https://unpkg.com/katex@0.16.9/dist/contrib/auto-render.min.js
+
+use_directory_urls: true
+strict: true
+watch:
+  - docs
+  - mkdocs.yml
